@@ -46,6 +46,24 @@ git push
 
 ---
 
+## 🏗️ How to Seed your Cloud Database
+Once your backend is connected to Atlas, you need to populate it with data (Universities, Scholarships, etc.).
+
+1.  **Open your Terminal** in the project root.
+2.  **Temporarily update your `backend/.env`** with the Atlas URI (ensure the `<password>` is filled).
+3.  **Run the following commands** one by one:
+    ```bash
+    # Push ALL initial data (Recommended)
+    npm run dev --prefix backend seed.js
+
+    # Or push specific data
+    npm run dev --prefix backend seed_all_unis.js
+    npm run dev --prefix backend seed_scholarships.js
+    ```
+4.  **Confirm**: Refresh your Atlas Dashboard to see the new collections!
+
+---
+
 ## 📺 How to use your GUI with the Cloud
 1.  Open **MongoDB Compass** on your computer.
 2.  Paste the Cloud Connection string (from Step 1) into the "New Connection" field.
