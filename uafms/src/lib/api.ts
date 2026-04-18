@@ -1,0 +1,79 @@
+/**
+ * Core API wrapper for communicating with the Node.js backend
+ */
+
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8080/api';
+
+// Helper to get token
+const getToken = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('uafms_token');
+  }
+  return null;
+};
+
+// Generic fetch wrapper
+const apiFetch = async (endpoint: string, options: RequestInit = {}) => {
+  const token = getToken();
+  
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    ...(options.headers as Record<string, string>),
+  };
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  // If uploading FormData, let browser set Content-Type
+  if (options.body instanceof FormData) {
+    delete headers['Content-Type'];
+  }
+
+  const config: RequestInit = {
+    ...options,
+    headers,
+  };
+
+  try {
+    const response = await fetch(`${BASE_URL}${endpoint}`, config);
+    const data = await response.json().catch(() => null);
+
+    if (!response.ok) {
+      // Handle 401 Unauthorized globally
+      if (response.status === 401 && typeof window !== 'undefined') {
+        // DO NOT redirect if we are currently trying to log in
+        const isLoginAttempt = endpoint.includes('/auth/login') || endpoint.includes('/auth/verify-2fa');
+        
+        if (!isLoginAttempt) {
+          localStorage.removeItem('uafms_token');
+          localStorage.removeItem('uafms_user');
+          window.location.href = '/login';
+        }
+      }
+      throw new Error(data?.message || `Request failed with status ${response.status}`);
+    }
+
+    return data;
+  } catch (error) {
+    console.error(`API Error (${endpoint}):`, error);
+    throw error;
+  }
+};
+
+export const api = {
+  get: (endpoint: string, options?: RequestInit) => apiFetch(endpoint, { ...options, method: 'GET' }),
+  post: (endpoint: string, data: unknown, options?: RequestInit) => 
+    apiFetch(endpoint, {
+      ...options,
+      method: 'POST',
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    }),
+  put: (endpoint: string, data: unknown, options?: RequestInit) => 
+    apiFetch(endpoint, {
+      ...options,
+      method: 'PUT',
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    }),
+  delete: (endpoint: string, options?: RequestInit) => apiFetch(endpoint, { ...options, method: 'DELETE' }),
+};

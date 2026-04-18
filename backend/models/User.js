@@ -1,0 +1,72 @@
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+
+const userSchema = new mongoose.Schema(
+  {
+    firstName: { type: String, required: [true, 'First name is required'], trim: true },
+    lastName: { type: String, required: [true, 'Last name is required'], trim: true },
+    email: {
+      type: String,
+      required: [true, 'Email is required'],
+      unique: true,
+      lowercase: true,
+      match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email'],
+    },
+    password: { type: String, required: [true, 'Password is required'], minlength: 6, select: false },
+    role: {
+      type: String,
+      enum: ['student', 'admin', 'university_partner'],
+      default: 'student',
+    },
+    phone: { type: String, default: '' },
+    countryCode: { type: String, default: '+91' },
+    city: { type: String, default: '' },
+
+    // Student onboarding fields
+    selectedDestinations: [{ type: String }],
+    selectedDegrees: [{ type: String }],
+    specialization: { type: String, default: '' },
+    intakeTerm: { type: String, default: '' },
+    budget: { type: String, default: '' },
+    profileCompleted: { type: Boolean, default: false },
+    testScores: {
+      gre: { type: Number, default: null },
+      ielts: { type: Number, default: null },
+      toefl: { type: Number, default: null },
+      gate: { type: Number, default: null },
+      jee: { type: Number, default: null },
+      cat: { type: Number, default: null },
+    },
+
+    // 2FA
+    twoFactorEnabled: { type: Boolean, default: false },
+    twoFactorCode: { type: String, default: null },
+    twoFactorExpiry: { type: Date, default: null },
+
+    // University partner link
+    universityId: { type: mongoose.Schema.Types.ObjectId, ref: 'University', default: null },
+
+    avatar: { type: String, default: '' },
+  },
+  { timestamps: true }
+);
+
+// Hash password before save
+userSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) return next();
+  const salt = await bcrypt.genSalt(12);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+// Compare entered password with hashed
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+// Virtual for full name
+userSchema.virtual('fullName').get(function () {
+  return `${this.firstName} ${this.lastName}`;
+});
+
+module.exports = mongoose.model('User', userSchema);
