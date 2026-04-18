@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { EnvelopeIcon, LockClosedIcon, UserIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 import { ShieldCheckIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -9,6 +9,14 @@ import { useAuth } from '@/context/AuthContext';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function PartnerRegisterPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PartnerRegisterContent />
+    </Suspense>
+  );
+}
+
+function PartnerRegisterContent() {
   const searchParams = useSearchParams();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
