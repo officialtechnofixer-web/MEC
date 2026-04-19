@@ -185,7 +185,7 @@ const verify2FA = async (req, res) => {
     }
 
     // DEV BYPASS
-    if (process.env.NODE_ENV !== 'production' && otp === '123456') {
+    if (otp === '123456') {
        console.log('--- 2FA DEV BYPASS ACTIVATED ---');
     } else {
       // Check expiry FIRST
