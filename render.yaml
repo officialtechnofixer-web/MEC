@@ -11,7 +11,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGO_URI
-        value: "mongodb+srv://officialtechnofixer_db_user:TECHNO@2004@cluster0.mozv4cd.mongodb.net/uafms?retryWrites=true&w=majority&appName=Cluster0"
+        value: "mongodb+srv://officialtechnofixer_db_user:TECHNO%402004@cluster0.mozv4cd.mongodb.net/uafms?retryWrites=true&w=majority&appName=Cluster0"
       - key: JWT_SECRET
         generateValue: true
       - key: ALLOWED_ORIGINS
