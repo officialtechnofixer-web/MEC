@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: mec-backend
+    runtime: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+        placeholder: "mongodb+srv://..."
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        sync: false
+        placeholder: "https://your-frontend.vercel.app"
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: JWT_EXPIRE
+        value: "30d"
+      - key: PORT
+        value: "10000"
