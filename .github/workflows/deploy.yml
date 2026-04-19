@@ -22,6 +22,9 @@ jobs:
           node-version: 18
 
       - name: Install and Build 🏗️
+        env:
+          NEXT_PUBLIC_API_URL: https://mec-backend-kfba.onrender.com/api
+          NEXT_PUBLIC_SOCKET_URL: https://mec-backend-kfba.onrender.com
         run: |
           cd uafms
           npm install
