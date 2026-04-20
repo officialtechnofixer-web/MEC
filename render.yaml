@@ -11,9 +11,9 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGO_URI
-        value: "mongodb+srv://officialtechnofixer_db_user:TECHNO%402004@cluster0.mozv4cd.mongodb.net/uafms?retryWrites=true&w=majority&appName=Cluster0"
+        sync: false
       - key: JWT_SECRET
-        generateValue: true
+        sync: false
       - key: ALLOWED_ORIGINS
         value: "*"
       - key: EMAIL_USER

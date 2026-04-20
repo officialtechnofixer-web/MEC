@@ -108,25 +108,35 @@ const forgotPassword = async (req, res) => {
 // @desc    Login user
 // @route   POST /api/auth/login
 const login = async (req, res) => {
+  const startTime = Date.now();
+  console.log(`\n[AUTH] 🔑 Login attempt: ${req.body.email} (IP: ${req.ip})`);
+  
   try {
     const { email, password, role } = req.body;
 
     const user = await User.findOne({ email }).select('+password');
     if (!user) {
+      console.warn(`[AUTH] ❌ User not found: ${email}`);
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
-    // Role verification (if specifically requested by frontend)
+    // Role verification
     if (role && user.role !== role) {
+      console.warn(`[AUTH] ⚠️ Role mismatch: Expecting ${role}, found ${user.role} for ${email}`);
       return res.status(401).json({ 
         message: `Access denied. This account is registered as a ${user.role}.` 
       });
     }
 
     const isMatch = await user.matchPassword(password);
+    console.log(`[AUTH] 🛡️ Password match: ${isMatch} (Time taken: ${Date.now() - startTime}ms)`);
+
     if (!isMatch) {
+      console.warn(`[AUTH] ❌ Password incorrect for: ${email}`);
       return res.status(401).json({ message: 'Invalid email or password' });
     }
+
+    console.log(`[AUTH] ✅ Success: ${email} logged in. Generating token...`);
 
     // If 2FA enabled, generate and send OTP
     // Skip 2FA for Admin role as per user request

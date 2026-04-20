@@ -62,14 +62,23 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           setToken(savedToken);
           // Update stored user data with fresh data from server
           localStorage.setItem('uafms_user', JSON.stringify(userData));
-        } else {
-          // Token is invalid or expired — clear everything
+        } else if (response.status === 401 || response.status === 403) {
+          // Token is explicitly invalid or expired — clear everything
           console.warn('Session expired. Please log in again.');
           localStorage.removeItem('uafms_token');
           localStorage.removeItem('uafms_user');
+          setUser(null);
+          setToken(null);
+        } else {
+          // Server error (5xx) or timeout — use cached data to maintain UX
+          console.log(`📡 Server error ${response.status}, using cached session.`);
+          const parsedUser = JSON.parse(savedUser);
+          setUser(parsedUser);
+          setToken(savedToken);
         }
-      } catch {
+      } catch (err) {
         // Network error — use cached data to allow offline-ish experience
+        console.warn('📡 Network error during validation, using cached session.');
         const parsedUser = JSON.parse(savedUser);
         setUser(parsedUser);
         setToken(savedToken);

@@ -13,6 +13,15 @@ const { initCronJobs } = require('./utils/cronJobs');
 // Load env vars
 dotenv.config();
 
+// ─── Environment Validation ────────────────────────────────
+const REQUIRED_ENV = ['MONGO_URI', 'JWT_SECRET'];
+const missingEnv = REQUIRED_ENV.filter(key => !process.env[key]);
+if (missingEnv.length > 0) {
+  console.error(`🚨 FATAL Error: Missing required env vars: ${missingEnv.join(', ')}`);
+  console.error(`👉 Ensure these are set in your .env file or hosting provider's dashboard.`);
+  process.exit(1);
+}
+
 // Connect to database
 connectDB();
 
