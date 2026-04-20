@@ -43,8 +43,11 @@ const collegeCoursesData: Record<string, string[]> = {
   'GLS University': ['BBA', 'MBA', 'Law', 'Commerce', 'Design', 'Computer Applications', 'Media'],
   'Alliance University': ['Engineering', 'Management', 'Law', 'Commerce', 'Liberal Arts'],
   'Manipal Academy': ['Engineering', 'Medicine', 'Management', 'Design', 'Hotel Management', 'Media', 'Computer Applications'],
-  'Ahmedabad Institute of Mgmt': ['MBA', 'PGDM', 'BBA', 'Business Management', 'Finance', 'Marketing'],
-  'SRM Institute of Science': ['Artificial Intelligence', 'Data Science', 'Cyber Security', 'Computer Engineering', 'Biomedical Engineering', 'Mechanical Engineering', 'Civil Engineering', 'B.Com', 'BBA', 'BCA', 'B.Sc', 'BPT', 'MPT']
+  'MIT World Peace University': ['Engineering', 'Management', 'Law', 'Design'],
+    'Parul University': ['Engineering', 'Management', 'Medical', 'Law'],
+    'Broadway Overseas Education': ['Overseas Education', 'IELTS', 'Visa Services'],
+    'Symbiosis School for Liberal Arts': ['Liberal Arts', 'Humanities', 'Social Sciences'],
+    'Ahmedabad Institute of Management': ['MBA', 'PGDM', 'BBA']
 };
 
 export default function CreateProfilePage() {

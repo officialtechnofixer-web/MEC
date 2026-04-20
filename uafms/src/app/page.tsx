@@ -147,17 +147,36 @@ const featuredColleges = [
     fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Manipal&background=random&color=fff&size=200',
     tag: 'Top University', color: 'green'
   },
+  
   {
-    id: 23, name: 'Ahmedabad Institute of Mgmt', location: 'Ahmedabad, Gujarat', rank: 'Top Management',
+    id: 23, name: 'MIT World Peace University', location: 'Pune, Maharashtra', rank: 'Top Private',
+    courses: ['Engineering', 'Management', 'Law', 'Design'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=MITWPU&background=random&color=fff&size=200',
+    tag: 'Top University', color: 'blue'
+  },
+  {
+    id: 24, name: 'Parul University', location: 'Vadodara, Gujarat', rank: 'Top Private',
+    courses: ['Engineering', 'Management', 'Medical', 'Law'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Parul&background=random&color=fff&size=200',
+    tag: 'Top University', color: 'purple'
+  },
+  {
+    id: 25, name: 'Broadway Overseas Education', location: 'Ahmedabad, Gujarat', rank: 'Consulting',
+    courses: ['Overseas Education', 'IELTS', 'Visa Services'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Broadway&background=random&color=fff&size=200',
+    tag: 'Overseas Consulting', color: 'green'
+  },
+  {
+    id: 26, name: 'Symbiosis School for Liberal Arts', location: 'Pune, Maharashtra', rank: 'Top Liberal Arts',
+    courses: ['Liberal Arts', 'Humanities', 'Social Sciences'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=SSLA&background=random&color=fff&size=200',
+    tag: 'Top Liberal Arts', color: 'orange'
+  },
+  {
+    id: 27, name: 'Ahmedabad Institute of Management', location: 'Ahmedabad, Gujarat', rank: 'Top Management',
     courses: ['MBA', 'PGDM', 'BBA'],
     fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=AIBM&background=random&color=fff&size=200',
     tag: 'Top Management', color: 'purple'
-  },
-  {
-    id: 24, name: 'SRM Institute of Science', location: 'Chennai, Tamil Nadu', rank: 'Top Institute',
-    courses: ['AI', 'Data Science', 'Cyber Security'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=SRM&background=random&color=fff&size=200',
-    tag: 'Top Engineering', color: 'orange'
   }
 ];
 

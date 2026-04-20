@@ -79,8 +79,11 @@ const seed = async () => {
       'GLS University': { loc: 'Ahmedabad, Gujarat', courses: ['BBA', 'MBA', 'Law', 'Commerce', 'Design', 'Computer Applications', 'Media'] },
       'Alliance University': { loc: 'Bengaluru, Karnataka', courses: ['Engineering', 'Management', 'Law', 'Commerce', 'Liberal Arts'] },
       'Manipal Academy': { loc: 'Manipal, Karnataka', courses: ['Engineering', 'Medicine', 'Management', 'Design', 'Hotel Management', 'Media', 'Computer Applications'] },
-      'Ahmedabad Institute of Mgmt': { loc: 'Ahmedabad, Gujarat', courses: ['MBA', 'PGDM', 'BBA', 'Business Management', 'Finance', 'Marketing'] },
-      'SRM Institute of Science': { loc: 'Chennai, Tamil Nadu', courses: ['Artificial Intelligence', 'Data Science', 'Cyber Security', 'Computer Engineering', 'Biomedical Engineering', 'Mechanical Engineering', 'Civil Engineering', 'B.Com', 'BBA'] }
+      'MIT World Peace University': { loc: 'Pune, Maharashtra', courses: ['Engineering', 'Management', 'Law', 'Design'] },
+      'Parul University': { loc: 'Vadodara, Gujarat', courses: ['Engineering', 'Management', 'Medical', 'Law'] },
+      'Broadway Overseas Education': { loc: 'Ahmedabad, Gujarat', courses: ['Overseas Education', 'IELTS', 'Visa Services'] },
+      'Symbiosis School for Liberal Arts': { loc: 'Pune, Maharashtra', courses: ['Liberal Arts', 'Humanities', 'Social Sciences'] },
+      'Ahmedabad Institute of Management': { loc: 'Ahmedabad, Gujarat', courses: ['MBA', 'PGDM', 'BBA'] }
     };
 
     const parsedUniversities = Object.entries(collegeData).map(([name, data], idx) => {

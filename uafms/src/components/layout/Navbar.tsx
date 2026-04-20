@@ -39,7 +39,7 @@ export const Navbar = () => {
                   'Ramaiah University', 'Sri Balaji University', 'Asia Pacific Institute',
                   'Pandit Deendayal Energy Univ', 'Symbiosis International Dubai', 'Indus University',
                   'SRM University', 'Sinhgad Management', 'SKIPS University', 'GLS University',
-                  'Alliance University', 'Manipal Academy', 'Ahmedabad Institute of Mgmt', 'SRM Institute of Science'
+                  'Alliance University', 'Manipal Academy', 'MIT World Peace University', 'Parul University', 'Broadway Overseas Education', 'Symbiosis School for Liberal Arts', 'Ahmedabad Institute of Management'
                 ].map(college => (
                   <Link key={college} href="/#colleges" className="text-[12px] text-muted hover:text-[#FF6B00] hover:font-semibold transition-all truncate">
                     {college}
