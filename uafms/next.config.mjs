@@ -3,14 +3,16 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   output: 'export',
-  basePath: isProd ? '/MEC' : '',
-  assetPrefix: isProd ? '/MEC/' : '',
   images: {
     unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    NEXT_PUBLIC_API_URL: 'https://mec-backend-kfba.onrender.com/api',
+    NEXT_PUBLIC_SOCKET_URL: 'https://mec-backend-kfba.onrender.com',
+  }
 };
 
 export default nextConfig;
