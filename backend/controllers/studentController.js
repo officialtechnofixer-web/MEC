@@ -24,7 +24,8 @@ const getDashboard = async (req, res) => {
     const counsellorAssignment = applications.find((a) => a.counsellor);
     let counsellor = null;
     if (counsellorAssignment) {
-      counsellor = await Counsellor.findById(counsellorAssignment.counsellor);
+      counsellor = await Counsellor.findById(counsellorAssignment.counsellor)
+        .populate('user', 'firstName lastName email');
     }
 
     // Calculate overall progress
@@ -66,16 +67,18 @@ const getDashboard = async (req, res) => {
     }
 
     res.json({
-      metrics: {
-        overallProgress,
-        totalApplications: totalApps,
-        acceptedCount,
-        pendingActions: missingDocs + pendingDocs + actionRequired,
-        nextDeadline,
-      },
-      applications: applications.slice(0, 5),
-      counsellor,
-      recommendations: mappedRecommendations,
+      data: {
+        metrics: {
+          overallProgress,
+          activeApplications: totalApps,
+          acceptedApplications: acceptedCount,
+          pendingActions: missingDocs + pendingDocs + actionRequired,
+          nextDeadline,
+        },
+        applications: applications.slice(0, 5),
+        counsellor,
+        recommendations: mappedRecommendations,
+      }
     });
   } catch (error) {
     res.status(500).json({ message: error.message });

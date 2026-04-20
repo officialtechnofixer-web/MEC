@@ -77,7 +77,7 @@ export default function StudentDashboard() {
         setBookingSuccess('');
       }, 3000);
     } catch (err: any) {
-      setBookingError(err.response?.data?.message || 'Failed to book session');
+      setBookingError(err.message || 'Failed to book session');
     } finally {
       setBookingLoading(false);
     }

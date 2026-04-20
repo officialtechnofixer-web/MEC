@@ -19,7 +19,9 @@ const getCounsellors = async (req, res) => {
       query.region = region;
     }
 
-    const counsellors = await Counsellor.find(query).sort({ name: 1 });
+    const counsellors = await Counsellor.find(query)
+      .populate('user', 'firstName lastName email')
+      .sort({ name: 1 });
 
     // Get unassigned leads count
     const unassignedLeads = await Application.countDocuments({ counsellor: null, pipelineStage: 'leads' });

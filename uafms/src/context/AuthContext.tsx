@@ -33,21 +33,53 @@ const AuthContext = createContext<AuthContextType>({
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<User | null>(() => {
-    if (typeof window !== 'undefined') {
-      const savedUser = localStorage.getItem('uafms_user');
-      return savedUser ? JSON.parse(savedUser) : null;
-    }
-    return null;
-  });
-  const [token, setToken] = useState<string | null>(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('uafms_token');
-    }
-    return null;
-  });
-  const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [token, setToken] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
+
+  // Validate token on app load
+  useEffect(() => {
+    const validateSession = async () => {
+      const savedToken = localStorage.getItem('uafms_token');
+      const savedUser = localStorage.getItem('uafms_user');
+
+      if (!savedToken || !savedUser) {
+        setIsLoading(false);
+        return;
+      }
+
+      try {
+        // Verify the token is still valid by calling /api/auth/me
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8080/api';
+        const response = await fetch(`${API_URL}/auth/me`, {
+          headers: { Authorization: `Bearer ${savedToken}` },
+        });
+
+        if (response.ok) {
+          const userData = await response.json();
+          setUser(userData);
+          setToken(savedToken);
+          // Update stored user data with fresh data from server
+          localStorage.setItem('uafms_user', JSON.stringify(userData));
+        } else {
+          // Token is invalid or expired — clear everything
+          console.warn('Session expired. Please log in again.');
+          localStorage.removeItem('uafms_token');
+          localStorage.removeItem('uafms_user');
+        }
+      } catch {
+        // Network error — use cached data to allow offline-ish experience
+        const parsedUser = JSON.parse(savedUser);
+        setUser(parsedUser);
+        setToken(savedToken);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    validateSession();
+  }, []);
 
   const login = (userData: User, authToken: string) => {
     setUser(userData);
