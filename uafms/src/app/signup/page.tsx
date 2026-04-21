@@ -21,33 +21,14 @@ const steps = [
 ];
 
 const collegeCoursesData: Record<string, string[]> = {
-  'Sinhgad Institutes': ['Engineering', 'Management', 'Pharmacy', 'Computer Science', 'Polytechnic', 'Architecture', 'MCA / MBA'],
-  'Mahindra University': ['Engineering', 'Management', 'Law', 'Digital Media', 'Design', 'Innovation Programs'],
-  'Karnavati University': ['Design', 'Law', 'Management', 'Liberal Arts', 'Commerce', 'Computer Applications'],
-  'ICFAI University Jaipur': ['BBA', 'B.Com', 'BA', 'BCA', 'B.Tech', 'B.Sc', 'BA LLB', 'BBA LLB', 'LLB', 'B.Pharm', 'MBA', 'MCA', 'M.Tech', 'M.Sc', 'Ph.D'],
-  'Swarrnim Startup & Innovation': ['Engineering', 'Management', 'Pharmacy', 'Agriculture', 'Design', 'Computer Science', 'Paramedical', 'Law'],
-  'Amity University': ['BBA', 'MBA', 'B.Tech', 'BCA', 'Law', 'Journalism', 'Psychology', 'Design'],
-  'Institute of Company Secretaries': ['CS Executive Entrance Test', 'CS Executive Program', 'CS Professional Program'],
-  'Symbiosis Institute of Tech': ['B.Tech Computer Science', 'Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Data Analytics', 'Artificial Intelligence & Data Science'],
-  'ICFAI Foundation': ['B.Tech', 'B.Arch', 'BBA', 'BCA', 'Law', 'MBA', 'MCA'],
-  'Jaipur National University': ['Arts', 'Commerce', 'Engineering', 'Management', 'Hotel Management', 'Nursing', 'Pharmacy', 'Media', 'Fine Arts'],
-  'Ramaiah University': ['Engineering', 'Dental', 'Pharmacy', 'Management', 'Design', 'Hospitality', 'Aviation'],
-  'Sri Balaji University': ['MBA', 'PGDM', 'Management', 'Marketing', 'HR', 'Finance', 'International Business'],
-  'Asia Pacific Institute': ['MBA', 'BBA', 'PGDM', 'Business Analytics', 'Finance', 'Marketing'],
-  'Pandit Deendayal Energy Univ': ['Liberal Studies', 'BA', 'B.Sc', 'MA', 'Public Policy', 'International Relations', 'Psychology'],
-  'Symbiosis International Dubai': ['Psychology', 'Counseling', 'Management', 'Business Administration'],
-  'Indus University': ['Ph.D', 'Management', 'Science', 'English', 'Computer Applications', 'Engineering', 'Cyber Security', 'Drone Pilot Course', 'Aviation Engineering'],
-  'SRM University': ['BBA', 'B.Com', 'BA', 'BCA', 'B.Tech', 'B.Sc', 'Law', 'MBA', 'MCA', 'M.Tech', 'M.Sc', 'Diploma', 'Ph.D'],
-  'Sinhgad Management': ['MBA', 'PGDM', 'Management', 'HR', 'Marketing', 'Finance'],
-  'SKIPS University': ['BBA', 'MBA', 'BCA', 'Commerce', 'IT', 'E-Gaming'],
-  'GLS University': ['BBA', 'MBA', 'Law', 'Commerce', 'Design', 'Computer Applications', 'Media'],
-  'Alliance University': ['Engineering', 'Management', 'Law', 'Commerce', 'Liberal Arts'],
-  'Manipal Academy': ['Engineering', 'Medicine', 'Management', 'Design', 'Hotel Management', 'Media', 'Computer Applications'],
-  'MIT World Peace University': ['Engineering', 'Management', 'Law', 'Design'],
-    'Parul University': ['Engineering', 'Management', 'Medical', 'Law'],
-    'Broadway Overseas Education': ['Overseas Education', 'IELTS', 'Visa Services'],
-    'Symbiosis School for Liberal Arts': ['Liberal Arts', 'Humanities', 'Social Sciences'],
-    'Ahmedabad Institute of Management': ['MBA', 'PGDM', 'BBA']
+  'Alliance School of Business': ['BBA', 'B.Com', 'MBA', 'PGDM', 'PhD'],
+  'Alliance School of Law': ['BA LLB (Hons)', 'BBA LLB (Hons)', 'LLM', 'PhD'],
+  'Alliance College of Engg & Design': ['B.Tech CSE', 'AI & ML', 'Data Science', 'Aerospace Engineering', 'M.Tech'],
+  'Alliance School of Liberal Arts': ['BA', 'B.Sc', 'Psychology', 'Liberal Arts', 'MA'],
+  'Alliance School of Sciences': ['B.Sc', 'M.Sc', 'Applied Physics', 'Applied Mathematics'],
+  'Alliance School of Design': ['B.Des', 'Fashion Design', 'Interior Design', 'Product Design'],
+  'Alliance School of Economics': ['BA Economics', 'MA Economics', 'PhD Economics'],
+  'Alliance Ascent College': ['BBA', 'B.Com', 'MBA']
 };
 
 export default function CreateProfilePage() {

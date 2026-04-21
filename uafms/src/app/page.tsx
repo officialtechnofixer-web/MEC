@@ -16,161 +16,52 @@ import { Navbar } from '@/components/layout/Navbar';
 
 const featuredColleges = [
   {
-    id: 1, name: 'Sinhgad Institutes', location: 'Pune, Maharashtra', rank: 'Top Institute',
-    courses: ['Engineering', 'Management', 'Pharmacy', 'Computer Science'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Sinhgad&background=random&color=fff&size=200',
-    tag: 'Top Engineering', color: 'blue'
-  },
-  {
-    id: 2, name: 'Mahindra University', location: 'Hyderabad, Telangana', rank: 'Premier University',
-    courses: ['Engineering', 'Management', 'Law', 'Design'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Mahindra&background=random&color=fff&size=200',
-    tag: 'Best Private', color: 'green'
-  },
-  {
-    id: 3, name: 'Karnavati University', location: 'Gandhinagar, Gujarat', rank: 'Top Design',
-    courses: ['Design', 'Law', 'Management', 'Commerce'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Karnavati&background=random&color=fff&size=200',
-    tag: 'Top Design', color: 'purple'
-  },
-  {
-    id: 4, name: 'ICFAI University Jaipur', location: 'Jaipur, Rajasthan', rank: 'Top University',
-    courses: ['BBA', 'B.Tech', 'MBA', 'Law'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ICFAI&background=random&color=fff&size=200',
-    tag: 'Top Multi-Disciplinary', color: 'orange'
-  },
-  {
-    id: 5, name: 'Swarrnim Startup & Innovation', location: 'Gandhinagar, Gujarat', rank: 'Innovation Leader',
-    courses: ['Engineering', 'Management', 'Pharmacy', 'Design'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Swarrnim&background=random&color=fff&size=200',
-    tag: 'Top Innovation', color: 'blue'
-  },
-  {
-    id: 6, name: 'Amity University', location: 'Ahmedabad, Gujarat', rank: 'Top Private',
-    courses: ['BBA', 'MBA', 'B.Tech', 'Law'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Amity&background=random&color=fff&size=200',
-    tag: 'Best Private', color: 'green'
-  },
-  {
-    id: 7, name: 'Institute of Company Secretaries', location: 'New Delhi, Delhi', rank: 'Premier Institute',
-    courses: ['CS Executive', 'CS Professional'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ICSI&background=random&color=fff&size=200',
-    tag: 'Top Professional', color: 'purple'
-  },
-  {
-    id: 8, name: 'Symbiosis Institute of Tech', location: 'Pune, Maharashtra', rank: 'Top Engineering',
-    courses: ['B.Tech CSE', 'AI', 'Machine Learning'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Symbiosis&background=random&color=fff&size=200',
-    tag: 'Top Engineering', color: 'orange'
-  },
-  {
-    id: 9, name: 'ICFAI Foundation', location: 'Hyderabad, Telangana', rank: 'Top Institute',
-    courses: ['B.Tech', 'MBA', 'Law', 'BBA'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ICFAI&background=random&color=fff&size=200',
-    tag: 'Top Multi-Disciplinary', color: 'blue'
-  },
-  {
-    id: 10, name: 'Jaipur National University', location: 'Jaipur, Rajasthan', rank: 'Top University',
-    courses: ['Engineering', 'Management', 'Pharmacy'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=JNU&background=random&color=fff&size=200',
-    tag: 'Top Private', color: 'green'
-  },
-  {
-    id: 11, name: 'Ramaiah University', location: 'Bangalore, Karnataka', rank: 'Top University',
-    courses: ['Engineering', 'Dental', 'Management', 'Pharmacy'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Ramaiah&background=random&color=fff&size=200',
-    tag: 'Top Private', color: 'purple'
-  },
-  {
-    id: 12, name: 'Sri Balaji University', location: 'Pune, Maharashtra', rank: 'Top Management',
-    courses: ['MBA', 'PGDM', 'Management'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Balaji&background=random&color=fff&size=200',
-    tag: 'Top Management', color: 'orange'
-  },
-  {
-    id: 13, name: 'Asia Pacific Institute', location: 'New Delhi, Delhi', rank: 'Top Management',
-    courses: ['MBA', 'PGDM', 'BBA'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=AsiaPacific&background=random&color=fff&size=200',
+    id: 1, name: 'Alliance School of Business', location: 'Bangalore, Karnataka', rank: 'Top Management',
+    courses: ['MBA', 'PGDM', 'BBA', 'B.Com'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ASB&background=random&color=fff&size=200',
     tag: 'Top Management', color: 'blue'
   },
   {
-    id: 14, name: 'Pandit Deendayal Energy Univ', location: 'Gandhinagar, Gujarat', rank: 'Premier University',
-    courses: ['Liberal Studies', 'BA', 'B.Sc', 'Public Policy'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=PDEU&background=random&color=fff&size=200',
-    tag: 'Top University', color: 'green'
+    id: 2, name: 'Alliance School of Law', location: 'Bangalore, Karnataka', rank: 'Top Law',
+    courses: ['BA LLB (Hons)', 'BBA LLB (Hons)', 'LLM'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ASL&background=random&color=fff&size=200',
+    tag: 'Best Private Law', color: 'green'
   },
   {
-    id: 15, name: 'Symbiosis International Dubai', location: 'Dubai, UAE', rank: 'Top International',
-    courses: ['Psychology', 'Management', 'BBA'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Symbiosis&background=random&color=fff&size=200',
-    tag: 'Top International', color: 'purple'
+    id: 3, name: 'Alliance College of Engg & Design', location: 'Bangalore, Karnataka', rank: 'Top Engineering',
+    courses: ['B.Tech CSE', 'AI & ML', 'Data Science'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ACED&background=random&color=fff&size=200',
+    tag: 'Top Tech', color: 'purple'
   },
   {
-    id: 16, name: 'Indus University', location: 'Ahmedabad, Gujarat', rank: 'Top University',
-    courses: ['Engineering', 'Management', 'Aviation', 'Cyber Security'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Indus&background=random&color=fff&size=200',
-    tag: 'Top University', color: 'orange'
-  },
-  {
-    id: 17, name: 'SRM University', location: 'Chennai, Tamil Nadu', rank: 'Top University',
-    courses: ['B.Tech', 'MBA', 'Law', 'M.Tech'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=SRM&background=random&color=fff&size=200',
-    tag: 'Top Multi-Disciplinary', color: 'blue'
-  },
-  {
-    id: 18, name: 'Sinhgad Management', location: 'Pune, Maharashtra', rank: 'Top Management',
-    courses: ['MBA', 'PGDM', 'Finance'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Sinhgad&background=random&color=fff&size=200',
-    tag: 'Top Management', color: 'green'
-  },
-  {
-    id: 19, name: 'SKIPS University', location: 'Ahmedabad, Gujarat', rank: 'Top Private',
-    courses: ['BBA', 'MBA', 'BCA', 'Commerce'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=SKIPS&background=random&color=fff&size=200',
-    tag: 'Top Private', color: 'purple'
-  },
-  {
-    id: 20, name: 'GLS University', location: 'Ahmedabad, Gujarat', rank: 'Top Private',
-    courses: ['BBA', 'MBA', 'Law', 'Design'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=GLS&background=random&color=fff&size=200',
-    tag: 'Top Private', color: 'orange'
-  },
-  {
-    id: 21, name: 'Alliance University', location: 'Bangalore, Karnataka', rank: 'Top University',
-    courses: ['Engineering', 'Management', 'Law'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Alliance&background=random&color=fff&size=200',
-    tag: 'Top Multi-Disciplinary', color: 'blue'
-  },
-  {
-    id: 22, name: 'Manipal Academy', location: 'Manipal, Karnataka', rank: 'Premier University',
-    courses: ['Engineering', 'Medicine', 'Management'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Manipal&background=random&color=fff&size=200',
-    tag: 'Top University', color: 'green'
-  },
-  
-  {
-    id: 23, name: 'MIT World Peace University', location: 'Pune, Maharashtra', rank: 'Top Private',
-    courses: ['Engineering', 'Management', 'Law', 'Design'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=MITWPU&background=random&color=fff&size=200',
-    tag: 'Top University', color: 'blue'
-  },
-  {
-    id: 24, name: 'Parul University', location: 'Vadodara, Gujarat', rank: 'Top Private',
-    courses: ['Engineering', 'Management', 'Medical', 'Law'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Parul&background=random&color=fff&size=200',
-    tag: 'Top University', color: 'purple'
-  },
-  {
-    id: 26, name: 'Symbiosis School for Liberal Arts', location: 'Pune, Maharashtra', rank: 'Top Liberal Arts',
-    courses: ['Liberal Arts', 'Humanities', 'Social Sciences'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=SSLA&background=random&color=fff&size=200',
+    id: 4, name: 'Alliance School of Liberal Arts', location: 'Bangalore, Karnataka', rank: 'Top Liberal Arts',
+    courses: ['Liberal Arts', 'Humanities', 'Psychology'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ASLA&background=random&color=fff&size=200',
     tag: 'Top Liberal Arts', color: 'orange'
   },
   {
-    id: 27, name: 'Ahmedabad Institute of Management', location: 'Ahmedabad, Gujarat', rank: 'Top Management',
-    courses: ['MBA', 'PGDM', 'BBA'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=AIBM&background=random&color=fff&size=200',
-    tag: 'Top Management', color: 'purple'
+    id: 5, name: 'Alliance School of Sciences', location: 'Bangalore, Karnataka', rank: 'Top Science',
+    courses: ['B.Sc', 'M.Sc', 'Research'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ASS&background=random&color=fff&size=200',
+    tag: 'Research Oriented', color: 'blue'
+  },
+  {
+    id: 6, name: 'Alliance School of Design', location: 'Bangalore, Karnataka', rank: 'Top Design',
+    courses: ['B.Des', 'Fashion Design', 'Interior Design'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ASD&background=random&color=fff&size=200',
+    tag: 'Top Innovation', color: 'green'
+  },
+  {
+    id: 7, name: 'Alliance School of Economics', location: 'Bangalore, Karnataka', rank: 'Top Economics',
+    courses: ['B.A. Economics', 'M.A. Economics'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=ASE&background=random&color=fff&size=200',
+    tag: 'Top Economics', color: 'purple'
+  },
+  {
+    id: 8, name: 'Alliance Ascent College', location: 'Bangalore, Karnataka', rank: 'Top Multi-Disciplinary',
+    courses: ['BBA', 'B.Com', 'MBA'],
+    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=AAC&background=random&color=fff&size=200',
+    tag: 'Top Professional', color: 'orange'
   }
 ];
 

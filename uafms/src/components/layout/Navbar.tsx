@@ -33,13 +33,8 @@ export const Navbar = () => {
               <div className="text-[14px] font-bold text-heading mb-3 pb-2 border-b border-border">Top Partner Colleges</div>
               <div className="grid grid-cols-3 gap-x-4 gap-y-2.5">
                 {[
-                  'Sinhgad Institutes', 'Mahindra University', 'Karnavati University', 'ICFAI University Jaipur',
-                  'Swarrnim Startup & Innovation', 'Amity University', 'Institute of Company Secretaries',
-                  'Symbiosis Institute of Tech', 'ICFAI Foundation', 'Jaipur National University',
-                  'Ramaiah University', 'Sri Balaji University', 'Asia Pacific Institute',
-                  'Pandit Deendayal Energy Univ', 'Symbiosis International Dubai', 'Indus University',
-                  'SRM University', 'Sinhgad Management', 'SKIPS University', 'GLS University',
-                  'Alliance University', 'Manipal Academy', 'MIT World Peace University', 'Parul University', 'Symbiosis School for Liberal Arts', 'Ahmedabad Institute of Management'
+                  'Alliance School of Business', 'Alliance School of Law', 'Alliance College of Engg & Design', 'Alliance School of Liberal Arts',
+                  'Alliance School of Sciences', 'Alliance School of Design', 'Alliance School of Economics', 'Alliance Ascent College'
                 ].map(college => (
                   <Link key={college} href="/#colleges" className="text-[12px] text-muted hover:text-[#FF6B00] hover:font-semibold transition-all truncate">
                     {college}
