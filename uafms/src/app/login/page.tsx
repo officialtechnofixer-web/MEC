@@ -108,7 +108,9 @@ export default function LoginPage() {
         <div className="w-full lg:w-[45%] bg-surface flex flex-col justify-center items-center px-8 sm:px-16 py-12 relative overflow-y-auto min-h-screen lg:min-h-0">
           <div className="w-full max-w-[400px]">
             <div className="flex lg:hidden mb-8 items-center gap-3">
-               <img src="/logo.jpeg" alt="MEC Logo" className="w-10 h-10 rounded object-contain" />
+               <div className="w-11 h-11 bg-white rounded-xl shadow-sm border border-border p-1.5 flex items-center justify-center">
+                 <img src="/logo.jpeg" alt="MEC Logo" className="max-w-full max-h-full object-contain" />
+               </div>
                <h2 className="text-[20px] font-bold tracking-tight text-[#1A1A2E]">MEC UAFMS</h2>
             </div>
             <h2 className="text-h2 text-heading mb-2">Student Login</h2>

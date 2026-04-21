@@ -381,7 +381,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/logo.jpeg" alt="MEC Logo" className="w-9 h-9 rounded-lg object-contain" />
+                <img src="/logo.jpeg" alt="MEC Logo" className="w-10 h-10 rounded-lg object-contain bg-white p-1 shadow-sm border border-white/10 shrink-0" />
                 <div>
                   <div className="font-black text-[16px]">MEC UAFMS</div>
                   <div className="text-[11px] text-gray-400">Maruti Education &amp; Consultancy</div>
@@ -419,8 +419,13 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[12px] text-gray-500">© 2026 Maruti Education &amp; Consultancy. All rights reserved.</p>
+          <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+              <p className="text-[12px] text-gray-500">© 2026 Maruti Education &amp; Consultancy. All rights reserved.</p>
+              <div className="text-[12px] text-gray-500 bg-white/5 px-3 py-1 rounded-full border border-white/5">
+                Made by <a href="https://www.technofixer.com/" className="text-[#FF6B00] hover:underline font-bold" target="_blank" rel="noopener noreferrer">Techno Fixer</a>
+              </div>
+            </div>
             <div className="flex gap-4">
               <Link href="#" className="text-[12px] text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="#" className="text-[12px] text-gray-500 hover:text-white transition-colors">Terms of Service</Link>

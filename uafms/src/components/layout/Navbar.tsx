@@ -15,9 +15,16 @@ export const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-surface shadow-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.jpeg" alt="MEC Logo" className="w-9 h-9 rounded-lg object-contain" />
-          <div>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#FF6B00] to-orange-400 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
+            <img 
+              src="/logo.jpeg" 
+              alt="MEC Logo" 
+              className="relative w-10 h-10 rounded-lg object-contain bg-white p-1 border border-border/50 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md" 
+            />
+          </div>
+          <div className="flex flex-col">
             <div className="font-black text-[16px] text-[#1A1A2E] dark:text-white leading-tight">MEC</div>
             <div className="text-[10px] text-gray-500 leading-tight font-medium">UAFMS</div>
           </div>
