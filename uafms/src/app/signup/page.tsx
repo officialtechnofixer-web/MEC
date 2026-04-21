@@ -140,7 +140,7 @@ function CreateProfile() {
       {/* minimal header */}
       <header className="h-16 border-b border-border bg-surface flex items-center px-6 md:px-12 shrink-0">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded shrink-0 flex items-center justify-center font-bold text-white text-lg bg-primary">M</div>
+          <img src="/logo.jpeg" alt="MEC Logo" className="w-8 h-8 rounded shrink-0 object-contain" />
           <span className="text-xl font-bold text-heading tracking-tight">MEC UAFMS</span>
         </Link>
         <div className="ml-auto text-sm text-muted">

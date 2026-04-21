@@ -381,7 +381,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-9 h-9 bg-[#FF6B00] rounded-lg flex items-center justify-center font-black text-lg">M</div>
+                <img src="/logo.jpeg" alt="MEC Logo" className="w-9 h-9 rounded-lg object-contain" />
                 <div>
                   <div className="font-black text-[16px]">MEC UAFMS</div>
                   <div className="text-[11px] text-gray-400">Maruti Education &amp; Consultancy</div>

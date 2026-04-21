@@ -107,7 +107,7 @@ export function Sidebar() {
     <div className="flex bg-surface w-64 flex-col h-full border-r border-border transition-colors duration-300">
       <div className="flex h-16 shrink-0 items-center px-6 border-b border-border">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-primary/20">M</div>
+          <img src="/logo.jpeg" alt="MEC Logo" className="w-8 h-8 rounded-lg object-contain shadow-lg shadow-primary/20" />
           <span className="text-xl font-bold tracking-tight text-heading">MEC UAFMS</span>
         </div>
       </div>

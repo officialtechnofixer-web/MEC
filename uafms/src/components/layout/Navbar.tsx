@@ -16,9 +16,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 bg-[#1A1A2E] rounded-lg flex items-center justify-center">
-            <span className="text-[#FF6B00] font-black text-lg">M</span>
-          </div>
+          <img src="/logo.jpeg" alt="MEC Logo" className="w-9 h-9 rounded-lg object-contain" />
           <div>
             <div className="font-black text-[16px] text-[#1A1A2E] dark:text-white leading-tight">MEC</div>
             <div className="text-[10px] text-gray-500 leading-tight font-medium">UAFMS</div>
