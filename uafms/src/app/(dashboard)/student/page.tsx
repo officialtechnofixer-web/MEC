@@ -365,39 +365,8 @@ export default function StudentDashboard() {
         <div className="space-y-6">
           
           {/* Upcoming Interview Widget */}
-          <div className="bg-[#0B0F19] rounded-xl border border-white/5 p-6 text-white relative overflow-hidden group">
-            <div className="relative z-10">
-              <div className="flex justify-between items-start mb-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
-                  <VideoCameraIcon className="w-6 h-6" />
-                </div>
-                <span className="text-[10px] font-black text-primary uppercase tracking-[2px] bg-primary/10 px-2 py-0.5 rounded">March 25</span>
-              </div>
-              <h4 className="text-sm font-bold mb-1 group-hover:text-primary transition-colors">IIM Ahmedabad Interview</h4>
-              <p className="text-[11px] text-gray-500 mb-4">Focus on: Social Impact & Quantitative Skills</p>
-              <a href="/student/interviews" className="w-full py-2 bg-white/5 hover:bg-white/10 rounded-lg text-xs font-bold flex items-center justify-center gap-2 border border-white/5 transition-all">
-                Pre-Interview Checklist <ArrowUpRightIcon className="w-3 h-3" />
-              </a>
-            </div>
-          </div>
 
           {/* Visa Status Widget */}
-          <div className="bg-surface rounded-xl border border-border p-6 shadow-sm">
-             <div className="flex justify-between items-center mb-4">
-                <h3 className="text-[12px] font-bold text-muted uppercase tracking-wider">Visa Progress</h3>
-                <ShieldCheckIcon className="w-5 h-5 text-success" />
-             </div>
-             <div className="flex items-end justify-between mb-2">
-                <span className="text-xl font-black text-heading">20%</span>
-                <span className="text-[11px] text-muted font-medium italic">Document Prep</span>
-             </div>
-             <div className="w-full bg-bg rounded-full h-1.5 overflow-hidden">
-                <div className="bg-success h-full rounded-full" style={{ width: '20%' }}></div>
-             </div>
-             <a href="/student/visa" className="mt-4 block text-center text-[10px] font-bold text-primary hover:underline uppercase tracking-widest">
-                Track Application
-             </a>
-          </div>
           <div className="bg-surface rounded-xl border border-border shadow-sm p-6 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
             <h3 className="text-h4 mb-4">Your Counsellor</h3>

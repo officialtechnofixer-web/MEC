@@ -52,7 +52,6 @@ const studentNav = [
     items: [
       { name: 'Finance Planner', href: '/student/finance', icon: BanknotesIcon },
       { name: 'Interviews', href: '/student/interviews', icon: CalendarDaysIcon },
-      { name: 'Visa Tracker', href: '/student/visa', icon: ShieldCheckIcon },
     ]
   },
   {

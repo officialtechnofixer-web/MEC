@@ -161,12 +161,6 @@ const featuredColleges = [
     tag: 'Top University', color: 'purple'
   },
   {
-    id: 25, name: 'Broadway Overseas Education', location: 'Ahmedabad, Gujarat', rank: 'Consulting',
-    courses: ['Overseas Education', 'IELTS', 'Visa Services'],
-    fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=Broadway&background=random&color=fff&size=200',
-    tag: 'Overseas Consulting', color: 'green'
-  },
-  {
     id: 26, name: 'Symbiosis School for Liberal Arts', location: 'Pune, Maharashtra', rank: 'Top Liberal Arts',
     courses: ['Liberal Arts', 'Humanities', 'Social Sciences'],
     fee: 'Contact for info', logo: 'https://ui-avatars.com/api/?name=SSLA&background=random&color=fff&size=200',
@@ -203,14 +197,10 @@ const streams = ['Engineering', 'Management', 'Medical', 'Science', 'Commerce', 
 const topExams = ['JEE Main', 'JEE Advanced', 'NEET UG', 'CAT', 'GATE', 'CLAT', 'XAT', 'CUET'];
 
 const universityPartners = [
-  { name: 'IIM Ahmedabad', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/58/IIM_Ahmedabad_Logo.svg/100px-IIM_Ahmedabad_Logo.svg.png' },
-  { name: 'IIT Gandhinagar', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/IIT_Gandhinagar_Logo.svg/100px-IIT_Gandhinagar_Logo.svg.png' },
   { name: 'Nirma University', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Nirma_University_Logo.svg/100px-Nirma_University_Logo.svg.png' },
   { name: 'MSU Baroda', logo: 'https://ui-avatars.com/api/?name=MSU&background=random&color=fff&size=200' },
   { name: 'DA-IICT', logo: 'https://ui-avatars.com/api/?name=DAIICT&background=random&color=fff&size=200' },
-  { name: 'Gujarat University', logo: 'https://ui-avatars.com/api/?name=GU&background=random&color=fff&size=200' },
   { name: 'PDEU', logo: 'https://ui-avatars.com/api/?name=PDEU&background=random&color=fff&size=200' },
-  { name: 'SVNIT Surat', logo: 'https://ui-avatars.com/api/?name=SVNIT&background=random&color=fff&size=200' },
 ];
 
 export default function LandingPage() {
@@ -535,13 +525,6 @@ export default function LandingPage() {
                 {['Partner With Us', 'University Portal', 'Post Your Programs', 'Student Leads'].map(l => (
                   <Link key={l} href="/login" className="text-[13px] text-gray-400 hover:text-[#FF6B00] transition-colors">{l}</Link>
                 ))}
-              </div>
-              <div className="mt-6 p-4 bg-white/5 border border-white/10 rounded-xl">
-                <div className="text-[12px] font-bold mb-2">Get the App</div>
-                <div className="flex gap-2">
-                  <div className="flex-1 text-center bg-white text-gray-900 text-[11px] font-bold py-2 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">📱 Google Play</div>
-                  <div className="flex-1 text-center bg-white text-gray-900 text-[11px] font-bold py-2 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">🍎 App Store</div>
-                </div>
               </div>
             </div>
           </div>
