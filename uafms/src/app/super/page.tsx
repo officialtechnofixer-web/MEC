@@ -166,21 +166,7 @@ export default function LoginPage() {
               </div>
             </form>
 
-            <div className="flex items-center my-6 gap-4">
-              <div className="h-px bg-border flex-1"></div>
-              <span className="text-label text-muted">OR CONTINUE WITH</span>
-              <div className="h-px bg-border flex-1"></div>
-            </div>
 
-            <button onClick={(e) => { e.preventDefault(); alert("Google OAuth integration requires production secrets. Please use email/password for the demo."); }} className="w-full h-10 bg-surface border border-border hover:bg-bg rounded-lg font-semibold text-[14px] text-heading flex justify-center items-center gap-3 transition-colors">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.56 12.25C22.56 11.47 22.49 10.74 22.37 10.04H12V14.22H17.93C17.67 15.58 16.91 16.73 15.77 17.5V20.21H19.34C21.43 18.28 22.56 15.53 22.56 12.25Z" fill="#4285F4"/>
-                <path d="M12 23.0001C14.97 23.0001 17.47 22.0101 19.34 20.2101L15.77 17.5001C14.76 18.1801 13.49 18.5901 12 18.5901C9.11002 18.5901 6.66002 16.6301 5.78002 14.0101H2.10002V16.8501C3.93002 20.4801 7.66002 23.0001 12 23.0001Z" fill="#34A853"/>
-                <path d="M5.78002 14C5.55002 13.32 5.43002 12.61 5.43002 11.88C5.43002 11.15 5.55002 10.44 5.78002 9.75998V6.91998H2.10002C1.35002 8.41998 0.93002 10.11 0.93002 11.88C0.93002 13.65 1.35002 15.34 2.10002 16.84L5.78002 14Z" fill="#FBBC05"/>
-                <path d="M12 5.40997C13.62 5.40997 15.06 5.96997 16.2 7.05997L19.41 3.84997C17.46 2.02997 14.96 0.999969 12 0.999969C7.66 0.999969 3.93 3.51997 2.1 7.14997L5.78 9.98997C6.66 7.36997 9.11 5.40997 12 5.40997Z" fill="#EA4335"/>
-              </svg>
-              Google
-            </button>
 
             <div className="mt-12 pb-6">
               <div className="flex flex-col gap-2 items-center text-center">
